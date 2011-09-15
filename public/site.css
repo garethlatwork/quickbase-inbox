@@ -1,0 +1,14 @@
+
+body { background-color: #F0F0F0; }
+p { font-family: Verdana; font-weight: bold; font-size: 12px;  }
+.required { font-family: Verdana; font-size: 11px; line-height: 14px; color: #FF0000; } 
+.leftsubmit { font-family: Verdana; font-weight: bold;  font-size: 12px; } 
+.submit { font-family: Verdana; font-weight: bold; margin-left: 125px; margin-top: 10px;  font-size: 12px;} 
+label { font-family: Verdana; font-weight: bold; color: #880000;  font-size: 12px; } 
+.labelright {  font-size: 12px; font-family: Verdana; font-weight: bold; color: #880000; display: block; float: left; width: 120px; text-align: right; margin-right: 5px; } 
+.form-row { padding: 5px 0; clear: both; width: 700px; } 
+label.error { font-family: Verdana;  font-size: 12px; width: 250px; display: block; float: left; color: red; padding-left: 10px; }
+i { font-family: Verdana;  font-size: 12px; font-style: italic; font-weight: bold; color: #000000; }
+.textinput {  font-size: 12px; font-family: Verdana; color: #000000; } 
+li { font-size: 12px; font-family: Verdana; color: #000000; }
+h1,h2,h2 { font-family: Verdana; }

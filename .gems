@@ -1,0 +1,7 @@
+sinatra
+haml
+quickbase_client
+rack-ssl-enforcer
+httpclient
+gmail_sender
+

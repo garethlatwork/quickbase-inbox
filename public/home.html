@@ -1,0 +1,96 @@
+<html>
+
+<head>
+  <title>QuickBase Inbox</title>
+  <link rel="stylesheet" href="/site.css" type="text/css">
+</head>
+
+<body style="padding: 20px;" >
+
+  <h2>QuickBase Inbox</h2>
+  <h3>Forward emails to QuickBase</h3>
+
+  <p>
+  This site forwards email messages to a QuickBase table.
+  <br />The site will create the QuickBase table for you, or you can specify the table and fields to use.
+  <br />The email messages come from <a href="http://cloudmailin.com">cloudmailin.com</a>. 
+  </p>
+  <p>
+  Request your own copy of this site <a href="#request_info_form">below</a>, or 
+  get the source code for the site <a href="https://github.com/garethlatwork/quickbase-inbox">here</a>.
+  </p>
+
+  <hr>
+  
+  <h3>Setup and Test</h3>
+
+  <ol>
+    <li>Sign up for an account on <a href="http://cloudmailin.com">cloudmailin.com</a>.
+      <p>Your cloudmailin account should forward email messages to this site, like this:
+        <br /><br />
+        <i><b>https://quickbase-inbox.heroku.com/&lt;quickbase_username@email.com&gt;/&lt;quickbase_password&gt;/-/-/-/-/-/-/-</b></i> 
+        <br />
+        <ul>
+          <li><i><b>&lt;quickbase_username@email.com&gt;</b></i> - a QuickBase login email address.</li>
+          <li><i><b>&lt;quickbase_password&gt;</b></i> - the QuickBase login password.</li>
+        </ul>
+        <br />
+        Note: All the <i><b>/-</b></i> parts are required.
+      </p>
+    </li>
+    <li>
+      Send a test email to your <a href="http://cloudmailin.com">cloudmailin</a> email address.
+      <p>Your email message must be in plain text format, not HTML format. 
+      <br />This will create a <i>QuickBase Email Inbox</i> application, with an <i>Emails</i> table containing one record for your test email.</p>
+    </li>
+    <li>Your QuickBase Inbox is ready!
+    </li>
+  </ol>
+
+  <hr>
+  
+  <h3>Options</h3>
+  
+  You can set a few options using the address of the target web site in your cloudmailin account.
+  <br />  The format of the target web site is:
+  <br /><br />
+  https://quickbase-inbox.heroku.com/<b><i>username@email.com</i></b>/<b><i>password</i></b>/<b><i>realm</i></b>/<b><i>table</i></b>/<b><i>apptoken</i></b>/<b><i>from</i></b>/<b><i>to</i></b>/<b><i>subject</i></b>/<b><i>message</i></b>.
+  <br />
+
+  <ol>
+    <li><i><b>username@email.com</b></i> - A QuickBase login email address (required).</li>
+    <li><i><b>password</b></i> - The QuickBase login password  (required).</li>
+    <li><i><b>realm</b></i> - <i>realm</i>.quickbase.com, if you do not access QuickBase on <i>www</i>.quickbase.com. </li>
+    <li><i><b>table</b></i> - The ID of your QuickBase Emails inbox table.</li>
+    <li><i><b>apptoken</b></i> - The application token, if any, required to access your Emails inbox table via the QuickBase API.</li>
+    <li><i><b>from</b></i> - The <i>ID</i> (a number) of the <i>Email</i> type field in your Emails inbox table that will receive the <i>From</i> email address.</li>
+    <li><i><b>to</b></i> - The <i>ID</i> (a number) of the <i>Text</i> type field in your Emails inbox table that will receive the <i>To</i> email address(es).</li>
+    <li><i><b>subject</b></i> - The <i>ID</i> (a number) of the <i>Text</i> type field in your Emails inbox table that will receive the <i>Subject</i> of the email.</li>
+    <li><i><b>message</b></i> - The <i>ID</i> (a number) of the <i>Text - Multi-line</i> type field in your Emails inbox table that will receive the <i>Message</i> text of the email.</li>
+  </ol>
+
+  <p>The options you do not use must be replaced by a dash ( <i>/-</i> ).</p>
+
+  <p>If you are uncomfortable putting a QuickBase username and password in cloudmailin.com, request your own copy of this
+  web site and have complete control over how emails are processed.</p>
+
+  <hr>
+  
+  <a id="request_info_form" />
+  <form action='/request_info' method='post'>
+    <fieldset>
+      <p>To request your own copy of this web site, please enter your email address and a message below.</p>
+      <label class='leftlabel'>Email address:</label>
+      <br />
+      <input class='text' name='info_request_email' size='25' type='text' />
+      <br /><br />
+      <label class='leftlabel'>Message:</label>
+      <br />
+      <textarea class='text' cols='60' name='info_request_message' rows='3'></textarea>
+      <br /><br />
+      <input class='leftsubmit' type='submit' value='Request Information' />
+    </fieldset>
+  </form>
+
+</body>
+</html>
